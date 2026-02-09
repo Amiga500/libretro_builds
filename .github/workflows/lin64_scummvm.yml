@@ -3,27 +3,27 @@ name: scummvm libretro Linux x86_64
 on:
   schedule:
     - cron: '0 2 * * *' # run at 2 AM UTC
-#  watch: # this is a hack that lets repo owners trigger a build by starring
-#    types: [started]
-#    if: github.actor == github.event.repository.owner.login
+  watch: # this is a hack that lets repo owners trigger a build by starring
+    types: [started]
 
 jobs:
   Linux:
     name: Build for Linux
     runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.actor == github.event.repository.owner.login
 
     steps:
     - name: Install needed packages
       run: sudo apt update && sudo apt install wget git build-essential
-    - name: Checkout source
-      run: git clone https://github.com/scummvm/scummvm.git && cd scummvm && git submodule update --init
+    - name: Checkout source (Miyoo-optimized)
+      run: git clone https://github.com/schmurtzm/ScummVM-MiyooMini.git scummvm && cd scummvm && git submodule update --init
     - name: include climits in a couple of files 
       run: |
         sed -i '1s;^;#include <climits>\n;' scummvm/engines/stark/console.cpp
         sed -i '1s;^;#include <climits>\n;' scummvm/common/random.cpp
         sed -i '1s;^;#include <climits>\n;' scummvm/base/commandLine.cpp
-    - name: Checkout libretro backend source
-      run: git clone https://github.com/diablodiab/libretro-scummvm-backend.git && mv libretro-scummvm-backend scummvm/backends/platform/libretro
+    - name: Checkout libretro backend source (Miyoo-optimized)
+      run: git clone https://github.com/schmurtzm/libretro-scummvm-miyoo-backend.git libretro-scummvm-backend && mv libretro-scummvm-backend scummvm/backends/platform/libretro
     - name: Build libretro core
       working-directory: scummvm/backends/platform/libretro/build
       run: |
