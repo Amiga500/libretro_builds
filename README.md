@@ -17,6 +17,7 @@ The **Miyoo Mini Plus** features a Cortex-A7 processor (ARMv7-A architecture) ru
 For Miyoo Mini+ and Onion OS users:
 - **Recommended**: Use the official Onion OS distribution which includes optimized libretro cores specifically tuned for the device
 - Visit the [Onion OS repository](https://github.com/OnionUI/Onion) for compatible and optimized builds
+- Check [schmurtzm's libretro_builds](https://github.com/schmurtzm/libretro_builds) repository - maintained by an Onion OS developer with similar automated builds
 - While technically compatible, the armhf builds here lack device-specific optimizations and Onion OS integration
 
 ## Available Builds
