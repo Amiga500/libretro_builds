@@ -1,5 +1,26 @@
 # libretro_builds
 Automated builds of RetroArch and libretro cores for Windows and Linux 64-bit (and some macOS Intel 64-bit)
+
+## Platform Compatibility
+
+This repository provides automated builds for the following platforms:
+- **Windows x86_64** (64-bit Windows)
+- **Linux x86_64** (64-bit Linux)
+- **Linux aarch64** (ARM 64-bit / ARMv8)
+- **Linux armhf** (ARM 32-bit / ARMv7)
+- **macOS x86_64** (Intel-based Macs)
+
+### Onion OS / Miyoo Mini+ Compatibility
+
+**These builds are NOT compatible with Onion OS (Miyoo Mini+)**. The Miyoo Mini+ uses an Allwinner F1C500s SoC with an ARMv5 architecture, which requires specifically optimized builds. 
+
+For Miyoo Mini+ and Onion OS users:
+- Use the official Onion OS distribution which includes optimized libretro cores
+- Visit the [Onion OS repository](https://github.com/OnionUI/Onion) for compatible builds
+- The cores in this repository target newer ARM architectures (ARMv7/ARMv8) and won't run on ARMv5 devices
+
+## Available Builds
+
 | RetroArch | [![RetroArch Nightly Build](https://github.com/hizzlekizzle/RetroArch-AppImage/workflows/RetroArch%20Nightly%20Build/badge.svg)](https://github.com/hizzlekizzle/RetroArch-AppImage/releases/tag/Nightlies) |
 | --------- |:--------------------------------|
 
