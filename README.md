@@ -12,12 +12,12 @@ This repository provides automated builds for the following platforms:
 
 ### Onion OS / Miyoo Mini+ Compatibility
 
-**These builds are NOT compatible with Onion OS (Miyoo Mini+)**. The Miyoo Mini+ uses an Allwinner F1C500s SoC with an ARMv5 architecture, which requires specifically optimized builds. 
+The **Miyoo Mini Plus** features a Cortex-A7 processor (ARMv7-A architecture) running at 1.2 GHz. While the **Linux armhf** builds in this repository are architecturally compatible with the Miyoo Mini+'s ARMv7-A processor, they are **not optimized for Onion OS**.
 
 For Miyoo Mini+ and Onion OS users:
-- Use the official Onion OS distribution which includes optimized libretro cores
-- Visit the [Onion OS repository](https://github.com/OnionUI/Onion) for compatible builds
-- The cores in this repository target newer ARM architectures (ARMv7/ARMv8) and won't run on ARMv5 devices
+- **Recommended**: Use the official Onion OS distribution which includes optimized libretro cores specifically tuned for the device
+- Visit the [Onion OS repository](https://github.com/OnionUI/Onion) for compatible and optimized builds
+- While technically compatible, the armhf builds here lack device-specific optimizations and Onion OS integration
 
 ## Available Builds
 
