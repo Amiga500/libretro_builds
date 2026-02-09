@@ -5,12 +5,12 @@ on:
     - cron: '0 2 * * *' # run at 2 AM UTC
   watch: # this is a hack that lets repo owners trigger a build by starring
     types: [started]
-    if: github.actor == github.event.repository.owner.login
 
 jobs:
   Linux:
     name: Build for Linux
     runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.actor == github.event.repository.owner.login
 
     steps:
     - name: add foreign arch

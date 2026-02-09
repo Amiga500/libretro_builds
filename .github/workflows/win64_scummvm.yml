@@ -5,12 +5,12 @@ on:
     - cron: '0 2 * * *' # run at 2 AM UTC
   watch: # this is a hack that lets repo owners trigger a build by starring
     types: [started]
-    if: github.actor == github.event.repository.owner.login
 
 jobs:
   Windows:
     name: Build for Windows
     runs-on: windows-latest
+    if: github.event_name == 'schedule' || github.actor == github.event.repository.owner.login
 
     steps:
     - uses: msys2/setup-msys2@v2
