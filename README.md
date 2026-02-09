@@ -14,11 +14,14 @@ This repository provides automated builds for the following platforms:
 
 The **Miyoo Mini Plus** features a Cortex-A7 processor (ARMv7-A architecture) running at 1.2 GHz. While the **Linux armhf** builds in this repository are architecturally compatible with the Miyoo Mini+'s ARMv7-A processor, they are **not optimized for Onion OS**.
 
+**Special Miyoo Mini+ Optimizations:**
+- **ScummVM**: This repository now uses [schmurtzm's Miyoo-optimized ScummVM fork](https://github.com/schmurtzm/ScummVM-MiyooMini) with the [Miyoo-specific libretro backend](https://github.com/schmurtzm/libretro-scummvm-miyoo-backend) for enhanced performance and compatibility
+
 For Miyoo Mini+ and Onion OS users:
 - **Recommended**: Use the official Onion OS distribution which includes optimized libretro cores specifically tuned for the device
 - Visit the [Onion OS repository](https://github.com/OnionUI/Onion) for compatible and optimized builds
 - Check [schmurtzm's libretro_builds](https://github.com/schmurtzm/libretro_builds) repository - maintained by an Onion OS developer with similar automated builds
-- While technically compatible, the armhf builds here lack device-specific optimizations and Onion OS integration
+- While technically compatible, most armhf builds here lack device-specific optimizations and Onion OS integration (except ScummVM)
 
 ## Available Builds
 
